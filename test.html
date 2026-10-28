@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Test in progress</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="who"><div class="title" id="tTitle">Loading your test…</div><div class="sub" id="tSub"></div></div>
+    <div class="timer-box"><span class="timer-label">Time left</span><div class="timer" id="timer" role="timer" aria-label="Time left">01:30:00</div></div>
+    <div class="save-status" id="saveStatus" aria-live="polite"><span class="dot"></span><span class="txt">Ready</span></div>
+    <button class="btn btn-submit" id="submitBtn" type="button">Submit Test</button>
+  </div>
+  <div class="progress" aria-hidden="true"><div id="progressFill" style="width:0"></div></div>
+</header>
+<div class="sr-only" aria-live="assertive" id="srAnnounce"></div>
+
+<main class="exam" id="exam">
+  <aside class="passage-pane hidden" id="passagePane" aria-label="Reading passage"></aside>
+  <div>
+    <div id="qArea"><div class="qcard"><span class="spinner"></span> Loading your questions…</div></div>
+    <nav class="navigator" id="navigator" aria-label="Question navigation" style="margin-top:16px"></nav>
+  </div>
+</main>
+
+<div class="passage-sheet hidden" id="passageSheet" role="dialog" aria-modal="true" aria-labelledby="sheetTitle">
+  <header><h2 id="sheetTitle">Passage</h2><button class="btn btn-primary btn-sm" id="sheetClose" type="button">Back to question</button></header>
+  <div class="passage-text" id="sheetText"></div>
+</div>
+
+<div class="overlay hidden" id="submitDialog" role="dialog" aria-modal="true" aria-labelledby="submitTitle">
+  <div class="dialog">
+    <h2 id="submitTitle">Submit your test?</h2>
+    <p id="submitSummary"></p>
+    <p>After you submit, you cannot change your answers.</p>
+    <div id="submitMsg"></div>
+    <div class="actions">
+      <button class="btn btn-ghost" id="submitCancel" type="button">Go back to the test</button>
+      <button class="btn btn-primary" id="submitConfirm" type="button">Yes, submit my test</button>
+    </div>
+  </div>
+</div>
+
+<div class="overlay hidden" id="timeUp" role="alertdialog" aria-modal="true" aria-labelledby="timeUpTitle">
+  <div class="dialog" style="text-align:center">
+    <h2 id="timeUpTitle">Time is up</h2>
+    <p><span class="spinner"></span></p>
+    <p id="timeUpMsg">Submitting your saved answers…</p>
+  </div>
+</div>
+<script src="/common.js"></script>
+<script src="/test.js"></script>
+</body>
+</html>

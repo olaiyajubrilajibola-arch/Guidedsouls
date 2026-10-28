@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Teacher page — School CBT</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body class="t-body">
+<div id="login" class="wrap hidden" style="max-width:440px;margin-top:8vh">
+  <form class="card" id="loginForm">
+    <h1>Teacher page</h1>
+    <p class="muted">Sign in to manage tests, marking and results.</p>
+    <div class="form-row"><label class="field" for="pw">Password</label><input type="password" id="pw" autocomplete="current-password"></div>
+    <div id="loginMsg" role="alert"></div>
+    <button class="btn btn-primary btn-big" type="submit">Sign in</button>
+  </form>
+</div>
+
+<div id="app" class="hidden">
+  <div class="t-top"><div class="inner">
+    <div class="brand" id="brand">Teacher page</div>
+    <span class="small" id="topInfo"></span>
+    <button class="btn btn-ghost btn-sm" id="logout" style="color:#fff;border-color:rgba(255,255,255,.4)">Sign out</button>
+  </div></div>
+  <div class="tabs" role="tablist">
+    <button class="tab" role="tab" data-tab="subs" aria-selected="true">Submissions</button>
+    <button class="tab" role="tab" data-tab="review" aria-selected="false">Marking review <span class="count hidden" id="reviewCount"></span></button>
+    <button class="tab" role="tab" data-tab="results" aria-selected="false">Results, comments &amp; broadsheets</button>
+    <button class="tab" role="tab" data-tab="exams" aria-selected="false">Tests &amp; mark schemes</button>
+    <button class="tab" role="tab" data-tab="settings" aria-selected="false">Settings</button>
+  </div>
+  <div class="panel"><div class="card" id="panel"></div></div>
+</div>
+
+<div class="drawer hidden" id="drawer" role="dialog" aria-modal="true" aria-labelledby="drawerTitle">
+  <header><h2 id="drawerTitle"></h2><button class="btn btn-ghost btn-sm" id="drawerClose">Close</button></header>
+  <div class="body" id="drawerBody"></div>
+</div>
+<div class="toast hidden" id="toast" role="status"></div>
+<script src="/common.js"></script>
+<script src="/teacher.js"></script>
+</body>
+</html>

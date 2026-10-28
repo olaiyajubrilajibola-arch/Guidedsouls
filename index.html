@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>School CBT — Start your test</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="school-head" id="schoolHead"></header>
+<main class="wrap">
+  <div id="resumeBox" class="notice info hidden"></div>
+  <form class="card" id="startForm" novalidate>
+    <h1 id="pageTitle">Start your test</h1>
+    <p class="muted">Enter your details, choose your level and class, then press <strong>Start Test</strong>. The test lasts <strong>1 hour 30 minutes</strong>.</p>
+
+    <div class="form-row">
+      <label class="field" for="name">Full name</label>
+      <input type="text" id="name" autocomplete="name" maxlength="100" placeholder="e.g. Amina Bello" required>
+    </div>
+    <div class="form-row">
+      <label class="field" for="adm">Admission number</label>
+      <input type="text" id="adm" autocomplete="off" maxlength="40" placeholder="e.g. JSS/2024/015" required>
+    </div>
+
+    <fieldset class="form-row" style="border:0;padding:0;margin:0 0 18px">
+      <legend class="field" style="font-weight:650;margin-bottom:6px">Level</legend>
+      <div class="choice-grid levels" id="levels"></div>
+    </fieldset>
+
+    <fieldset class="form-row hidden" id="classRow" style="border:0;padding:0;margin:0 0 18px">
+      <legend class="field" style="font-weight:650;margin-bottom:6px">Class</legend>
+      <div class="choice-grid classes" id="classes"></div>
+    </fieldset>
+
+    <div class="form-row hidden" id="subjectRow">
+      <label class="field" for="subject">Subject</label>
+      <select id="subject"></select>
+    </div>
+
+    <div id="formMsg" role="alert"></div>
+    <button type="submit" class="btn btn-primary btn-big" id="startBtn">Start Test</button>
+  </form>
+  <p class="muted small" style="text-align:center;margin-top:18px">Already finished? <a href="/result">View your result with your result code</a>.</p>
+</main>
+
+<div class="overlay hidden" id="rulesDialog" role="dialog" aria-modal="true" aria-labelledby="rulesTitle">
+  <div class="dialog">
+    <h2 id="rulesTitle">Before you begin</h2>
+    <p>This test has <strong>41 questions</strong> and lasts <strong>1 hour 30 minutes</strong>. The clock starts when you press the button below.</p>
+    <ul class="rule-list">
+      <li>Choose or type your answer, then press <strong>Confirm Answer</strong>.</li>
+      <li><strong>A confirmed answer is saved and locked.</strong> You cannot change it afterwards, so check before you confirm.</li>
+      <li>After you confirm, you will see whether your answer was right. The correct answer is not shown.</li>
+      <li>Read the story passage at any time — it stays beside the questions, or tap <em>Read passage</em> on a phone.</li>
+      <li>If the page closes, open it again and enter the same details. Your answers and time are kept.</li>
+    </ul>
+    <label class="toggle"><input type="checkbox" id="reduceMotion">
+      <span><strong>Use still celebrations</strong><br><span class="small muted">Show a still “Well done” picture instead of moving balloons.</span></span></label>
+    <div class="actions">
+      <button class="btn btn-ghost" id="rulesBack" type="button">Go back</button>
+      <button class="btn btn-primary" id="rulesGo" type="button">I understand — start my test</button>
+    </div>
+  </div>
+</div>
+<script src="/common.js"></script>
+<script src="/entry.js"></script>
+</body>
+</html>

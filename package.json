@@ -1,0 +1,12 @@
+{
+  "name": "school-cbt",
+  "version": "1.0.0",
+  "description": "Simple school computer-based testing website with automatic marking, result sheets and broadsheets.",
+  "main": "run-local.js",
+  "private": true,
+  "engines": { "node": ">=22.5" },
+  "scripts": {
+    "start": "node --disable-warning=ExperimentalWarning run-local.js",
+    "test": "node --disable-warning=ExperimentalWarning test/run-tests.js"
+  }
+}

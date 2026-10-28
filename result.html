@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your result</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="school-head" id="schoolHead"></header>
+<main class="wrap">
+  <div id="out"></div>
+  <form class="card" id="codeForm" style="margin-top:18px">
+    <h2>View a result</h2>
+    <p class="muted">Enter the result code you received when you submitted your test.</p>
+    <div class="form-row"><label class="field" for="code">Result code</label>
+      <input type="text" id="code" placeholder="e.g. ABCD-2345" autocomplete="off" style="text-transform:uppercase;letter-spacing:.06em"></div>
+    <div id="codeMsg" role="alert"></div>
+    <button class="btn btn-primary btn-big" type="submit">Show my result</button>
+  </form>
+  <p class="small" style="text-align:center;margin-top:16px"><a href="/">Back to the start page</a></p>
+</main>
+<script src="/common.js"></script>
+<script src="/result.js"></script>
+</body>
+</html>
